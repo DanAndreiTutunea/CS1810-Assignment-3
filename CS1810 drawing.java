@@ -1,50 +1,134 @@
 import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 
-public class CS1702_Lab8_Finch {
+public class CS1810_drawing {
 
-	 public static void main(final String[] args)
-     {
-     Finch myFinch = new Finch();
+	 public static void main(final String[] args){
 
-//     8.5 A User Defined Function for the Finch Robot
+     Finch HK_14 = new Finch();
 
-     long timeToRun = 8000;
-     long noOfObst = 0;
+     // init a list of path objects
+     
+
+     
+     //reads the command
+     //creates a path object based on the command
+     //if command is valid then adds it to the list of path objects executes it
+     //the result of the executed command is then stored in correct field of the path object
+
+     
+    
      
      
-     noOfObst = noOfObstacles(timeToRun, myFinch);
-     
-     System.out.println(noOfObst + " found!");
 
-     myFinch.quit();
+     HK_14.quit();
      System.exit(0);
      }
-	
-	 public static long noOfObstacles(long runtime, Finch John)
-	 {
-		 
-//		8.5 A User Defined Function for the Finch Robot
-//		Write a function/method that takes as input an integer corresponding to a time in milliseconds (ms) 
-//		and then moves the Finch Robot around randomly for this time counting the number of obstacles it encounters using both obstacle detectors.
-//		This number of obstacles is returned by the function/method.
 
-		 long result=0;
-		 boolean [] sensors = John.getObstacleSensors();
-		 
-		 while (runtime > time)
-		 {
-			 while (sensors [0] == false && sensors[1] == false)
-			 {
-				 // random action
-				 
-			 }
-			 
-			 
-			 result++;
-		 }
-		 return (result);
-		 
-	 }
-	 
-	
+
+     public static String[] readCommand(){
+
+         //instructs the user to input data and reads the data
+
+     }
+
+     public static void printCommandList( args TBD ){
+         
+         //prints the list of executed commands before exiting
+
+     }
+
+     public static int executeMovement(Finch John, path move){
+         
+         //executes the movement as per the object received while making sure the movement is not interupted
+
+     }
+
+     public static boolean obstacle(Finch John){
+
+         //checks for obstacles
+
+     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+//set of movement instructions
+
+class moveInstruction {
+
+private int speedLeft, speedRight; //full list of variables to be determined
+
+moveInstruction( ARGS ){ //args to be determined
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//class calculating the move steps to achieve the required command
+
+class path {
+
+int shape, lenght, width, lengthA, lengthB, lengthC, angleA, angleB, angleC;
+int error, result;
+ArrayList<moveInstruction> PathSteps = new ArrayList<moveInstruction>();
+
+path(final String[] input){
+
+//init all
+//validate based on shape - if T also calculate angles and validate they can be real
+//calculate the list of movement steps
+
+
+}
+
+
+private int validateInput(){
+    // validates input based on shape required and lenghts
+    // will set the error variable to 0 if all correct, or a set code if incorrect
+    //if T and lenghts ok, calculate angles - function will return a value depending on whether angles can exist
+
+}
+
+private int triangleAngles(){
+    //function returns a value dependent of whether angles can be correctly calclated based on side lenghts
+
+}
+
+private void claculate(){
+    // calculates the list of steps in order to achieve the required steps
+
+}
+
+public void setResult(){
+    //sets the result as reported during or after command execution
+
+}
+
+
+}
+
+
+
+
+
